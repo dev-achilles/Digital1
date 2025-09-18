@@ -151,12 +151,19 @@
   <section class="contact section" id="contact">
     <div class="container fade-in">
       <h2 class="section-title">Get In Touch</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+      <form id="enquiryForm" method="POST" action="/send-enquiry">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+  <input type="submit" value="Send Enquiry">
+</form>
+
     </div>
   </section>
 

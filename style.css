@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #2e6ff2;
+  --secondary-color: #0b2f6b;
+  --text-color: #333;
+  --bg-light: #f4f7fc;
+  --bg-dark: #1a1a1a;
+  --card-bg: #ffffff;
+  --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+/* Header & Nav */
+header {
+  background: var(--card-bg);
+  box-shadow: var(--shadow-light);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(90deg, #f4f7fc 60%, #e0e9f8 100%);
+  padding: 100px 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-content .text {
+  flex: 1;
+}
+
+.hero-content .image {
+  flex: 1;
+  text-align: right;
+}
+
+/* This is the key change to resize the image */
+.hero-content .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.5s ease;
+}
+/* New CSS to match the style of the reference site */
+.hero-content .image img:hover {
+  transform: scale(1.02);
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #2458c5;
+  transform: translateY(-3px);
+}
+
+/* Services Section */
+.services, .about, .contact, .growth, .grow-traffic-section {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+/* Growth Section */
+.growth-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  text-align: left;
+  padding: 50px 0;
+}
+
+.growth-text {
+  flex: 1;
+}
+
+.growth-text h2 {
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.growth-text p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.growth-text ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.growth-text ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.growth-image {
+  flex: 1;
+  text-align: center;
+}
+
+.growth-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: var(--shadow-light);
+}
+
+/* About Section */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  text-align: left;
+  padding: 50px 0;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: #555;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: var(--shadow-light);
+}
+
+/* Contact Section */
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Footer */
+footer {
+  background: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.card.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: var(--card-bg);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: var(--shadow-light);
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-content, .growth-content, .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content .text, .hero-content .image, .growth-text, .growth-image, .about-text, .about-image {
+    flex: none;
+  }
+
+  .hero-content .image {
+    order: -1;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .about-image, .growth-image {
+    order: -1;
+  }
+}
+
+/* New Section Styles */
+.service-section {
+  padding: 80px 0;
+  background-color: var(--card-bg);
+  text-align: center;
+}
+
+.section-description {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 18px;
+  color: #666;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: var(--shadow-light);
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #555;
+  font-size: 16px;
+}
+
+.cta {
+  margin-top: 50px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2458c5;
+}
+
+.grow-traffic-section {
+  padding: 80px 0;
+  background-image: linear-gradient(rgba(46, 111, 242, 0.8), rgba(46, 111, 242, 0.8)), url('images/growth.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+.grow-traffic-section .section-title,
+.grow-traffic-section .subtitle,
+.grow-traffic-section .description {
+  color: #fff;
+}
+
+.grow-traffic-section .section-title {
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.grow-traffic-section .subtitle {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.grow-traffic-section .description {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+}
